@@ -31,7 +31,7 @@ ActiveAdmin.register Document do
   end
 
   index as: :grid, columns: 5 do |document|
-    link_to image_tag(document.image), admin_dossier_document_path(document.dossier, document)
+    link_to image_tag(document.image), '#', class: 'test'
   end
 
   controller do

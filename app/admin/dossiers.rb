@@ -27,7 +27,7 @@ ActiveAdmin.register Dossier do
     column :name
     column :description
     column :created_at
-
+    
     actions
   end
 

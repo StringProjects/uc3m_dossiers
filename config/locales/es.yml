@@ -30,6 +30,10 @@ es:
         reset_password_token: 'token restablecimiento contraseña'
         reset_password_sent_at: 'fecha de restablecimiento contraseña'
         remember_created_at: 'fecha de recuerdo'
+        password: 'Contraseña'
+        password_confirmacion: 'Confirmar contraseña'
+        sign_in_count: 'Accesos'
+        current_sign_in_at: 'Último acceso'
         created_at: 'Creado'
         updated_at: 'Actualizado'
     errors:
