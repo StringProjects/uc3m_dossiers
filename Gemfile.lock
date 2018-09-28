@@ -1,3 +1,12 @@
+GIT
+  remote: git@github.com:camumino/arctic_admin.git
+  revision: 9664fb0df6a77b0b7a3440c7fdfba2505c3dad78
+  specs:
+    arctic_admin (1.5.0)
+      activeadmin (>= 1.1.0, < 2.0)
+      font-awesome-rails
+      jquery-rails
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -90,6 +99,8 @@ GEM
     erubi (1.7.1)
     execjs (2.7.0)
     ffi (1.9.25)
+    font-awesome-rails (4.7.0.4)
+      railties (>= 3.2, < 6.0)
     formtastic (3.1.5)
       actionpack (>= 3.2.13)
     formtastic_i18n (0.6.0)
@@ -243,6 +254,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin
+  arctic_admin!
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)

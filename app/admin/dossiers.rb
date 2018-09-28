@@ -24,6 +24,13 @@ ActiveAdmin.register Dossier do
       item dossier.id, admin_dossier_documents_path(dossier)
     end
 
+    column :image do |dossier|
+      begin
+        image_tag url_for(dossier.image), class: "dossier_index_image"
+      rescue
+      end
+    end
+
     column :name
     column :description
     column :created_at
@@ -45,7 +52,11 @@ ActiveAdmin.register Dossier do
       row :name
       row :description
       row :image do |dossier|
+      begin
         image_tag url_for(dossier.image)
+      rescue
+      end
+        
       end
     end
   end
