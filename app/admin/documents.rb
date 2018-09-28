@@ -14,7 +14,25 @@ ActiveAdmin.register Document do
 
   belongs_to :dossier
 
+  filter :name
+  filter :description
+  filter :created_at
+
   permit_params :name, :description, :image
+
+  form do |f|
+    inputs do
+      input :dossier, as: :hidden
+      input :name, required: true
+      input :description, required: true
+      input :image, as: :file, required: true
+      actions
+    end
+  end
+
+  index as: :grid, columns: 5 do |document|
+    link_to image_tag(document.image), admin_dossier_document_path(document.dossier, document)
+  end
 
   controller do
     def scoped_collection

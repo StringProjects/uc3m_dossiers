@@ -11,8 +11,13 @@ ActiveAdmin.register Dossier do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
+  menu priority: 1
 
   permit_params :name, :description, :image
+
+  filter :name
+  filter :description
+  filter :created_at
 
   index do
     actions defaults: false do |dossier|
@@ -25,7 +30,6 @@ ActiveAdmin.register Dossier do
 
     actions
   end
-
 
   form do |f|
     inputs do
