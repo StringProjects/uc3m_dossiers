@@ -1,0 +1,45 @@
+/************************************************************
+ * #FUNCTIONS
+ ************************************************************/
+
+
+/* This block of functions 
+   were got from Foundation ZURB framework 
+   http://foundation.zurb.com/sites/docs/v/5.5.3/components/sass.html
+ */
+
+$font-default-size : 16; // Set a font default size 
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@function convert-to-rem($value, $base-value: $rem-base)  {
+  $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+  @if ($value == 0rem) { $value: 0; } // Turn 0em into 0
+  @return $value;
+}
+
+@function rem-calc($values, $base-value: $font-default-size) {
+  $max: length($values);
+
+  @if $max == 1 { @return convert-to-rem(nth($values, 1), $base-value); }
+
+  $remValues: ();
+  @for $i from 1 through $max {
+    $remValues: append($remValues, convert-to-rem(nth($values, $i), $base-value));
+  }
+  @return $remValues;
+}
+// End of Foundation ZURB functions block */
+
+
+
+
+// From px to vw
+$set-default-width: 375; // Set a device default width
+
+@function vw-calc($target, $default-width: $set-default-width) {   
+  $vw-context: ($default-width * 0.01) * 1px;   
+  @return ($target/$vw-context) * 1vw;
+}

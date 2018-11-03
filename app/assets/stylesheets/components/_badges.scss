@@ -1,0 +1,46 @@
+/************************************************************
+ * BADGES
+ ************************************************************/
+
+// Badge
+.badge {
+  background-color: $primary-color;
+  border-radius: rem-calc(11);
+  color: white;
+  font-family: $font-family-medium;
+  font-size: $font-size-micro;
+  line-height: $font-size-micro;
+  width: rem-calc(22);
+  height: rem-calc(22);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+
+  // Bordered
+  &.bordered {
+    border: 2px solid white;
+  }
+  // @Bordered
+
+  // Size
+  &.big {
+    border-radius: rem-calc(19);
+    font-size: $font-size-h6;
+    width: rem-calc(38);
+    height: rem-calc(38);
+    padding-top: rem-calc(3);
+  }
+  // @Size
+
+  // Colors
+  &.secondary {
+    background-color: $secondary-color;
+  }
+  &.tertiary {
+    background-color: $tertiary-color;
+  }
+  // @Colors
+
+}
+// @Badge

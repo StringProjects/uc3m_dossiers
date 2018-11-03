@@ -1,0 +1,46 @@
+/************************************************************
+ * LIBS
+ ************************************************************/
+@import 'libs/jquery.bxslider';
+@import 'libs/slick';
+@import 'libs/toggleSwitch';
+@import 'libs/jquery-ui.min';
+
+
+
+
+
+/************************************************************
+ * APPLICATION 
+ ************************************************************/
+@import 'functions';
+@import '_config';
+
+
+
+
+
+
+/************************************************************
+ * GLOBAL
+ ************************************************************/
+@import 'global';
+
+
+/************************************************************
+ * COMPONENTS 
+ ************************************************************/
+@import 'components/header';
+@import 'components/grid';
+@import 'components/buttons';
+@import 'components/texts';
+@import 'components/tags';
+@import 'components/slick';
+@import 'components/cards';
+@import 'components/badges';
+@import 'components/modals';
+@import 'components/menu';
+
+.header-tabs {
+  display: none;
+}

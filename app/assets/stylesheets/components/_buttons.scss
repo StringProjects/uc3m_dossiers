@@ -1,0 +1,198 @@
+/************************************************************
+ * BUTTONS
+ ************************************************************/
+
+// button
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: transparent;
+  border: 0;
+  color: $grey-brown;
+  cursor: pointer;
+  padding: 0;
+}
+// @button
+
+
+// Btn
+.btn {
+  transition: all 300ms ease-out;
+  background-color: $primary-color;
+  border-radius: rem-calc(4);
+  color: white;
+  cursor: pointer;
+  font-family: $font-family-bold;
+  font-size: $font-size-h6;
+  line-height: $font-size-h6;
+  width: auto;
+  height: $kilo-size;
+  -js-display: flex;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-right: rem-calc(24);
+  padding-left: rem-calc(24);
+
+  &:hover {
+    filter: brightness(110%);
+  }
+
+  // Colors
+  &.secondary {
+    background-color: $secondary-color;
+
+    &.bordered {
+      background-color: transparent;
+      border-color: $secondary-color;
+      color: $secondary-color;
+    }
+  }
+  &.tertiary {
+    background-color: $tertiary-color;
+
+    &.bordered {
+      background-color: transparent;
+      border-color: $tertiary-color;
+      color: $tertiary-color;
+    }
+  }
+  &.white {
+    background-color: white;
+    color: $grey-brown;
+  }
+  &.grey-lighter {
+    background-color: $grey-lighter;
+    color: $grey-brown;
+  }
+  // @Colors
+
+  // RR.SS
+  &.facebook {
+    background-color: $facebook;
+    position: relative;
+    .btn-icon {
+      border-right: rem-calc(1) solid $blue-grayish;
+      position: absolute;
+      left: rem-calc(20);
+      padding-right: rem-calc(20);
+    }
+  }
+  &.google {
+    background-color: $grey-lighter;
+    color: $grey-brown;
+    position: relative;
+    .btn-icon {
+      border-right: rem-calc(1) solid $grey-light;
+      position: absolute;
+      left: rem-calc(20);
+      padding-right: rem-calc(20);
+    }
+  }
+  // @RR.SS
+  
+  &.rounded {
+    border-radius: rem-calc(24);
+  }
+
+  &.bordered {
+    border: 1px solid $grey-light;
+  }
+
+  &.with-icon {
+    flex-direction: row;
+    .btn-icon {
+      margin-right: rem-calc(24);
+    }
+  }
+
+  &.with-badge {
+    position: relative;
+
+    .badge {
+      position: absolute;
+      top: rem-calc(-10);
+      right: rem-calc(-10);
+    }
+  }
+
+  &.full {
+    width: 100%;
+    justify-content: center;
+  }
+
+}
+// @Btn
+
+
+// Wrapper buttons
+.wrapper-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &.full {
+    .btn {
+      width: 100%;
+      justify-content: center;
+
+      @media #{$lg-and-up} {
+        flex: 1;
+      }
+    }
+  }
+
+  &.column {
+    flex-direction: column;
+
+    .btn {
+      margin-left: 0;
+      margin-bottom: $font-size-micro;
+
+      &:first-child {
+        margin-bottom: $font-size-micro;
+      }
+    }
+  }
+
+  .btn {
+    margin-left: $font-size-h5;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+// @Wrapper buttons
+
+
+// App Store
+.wrapper-buttons {
+  &.apps {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: rem-calc(24);
+
+    &.big {
+      .app-store ,
+      .google-play {
+        width: rem-calc(162);
+        height: rem-calc(53);
+      }
+    }
+
+    .app-store ,
+    .google-play {
+      width: rem-calc(130);
+      height: rem-calc(41);
+    }
+
+    a:first-child {
+      margin-right: rem-calc(16);
+    }
+  }
+
+}
+// @App Store

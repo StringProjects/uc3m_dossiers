@@ -13,7 +13,7 @@ ActiveAdmin.register Dossier do
 # end
   menu priority: 1
 
-  permit_params :name, :description, :image
+  permit_params :name, :description, :image, :donwload_link
 
   filter :name
   filter :description
@@ -21,7 +21,7 @@ ActiveAdmin.register Dossier do
 
   index do
     actions defaults: false do |dossier|
-      item dossier.id, admin_dossier_documents_path(dossier)
+      item dossier.id, admin_dossier_path(dossier)
     end
 
     column :image do |dossier|
@@ -43,6 +43,7 @@ ActiveAdmin.register Dossier do
       input :name, required: true
       input :description, required: true
       input :image, as: :file, required: true
+      input :donwload_link
       actions
     end
   end
@@ -52,12 +53,13 @@ ActiveAdmin.register Dossier do
       row :name
       row :description
       row :image do |dossier|
-      begin
-        image_tag url_for(dossier.image)
-      rescue
+        begin
+          image_tag url_for(dossier.image)
+        rescue
+        end
       end
-        
-      end
+      
+      row :donwload_link
     end
   end
 

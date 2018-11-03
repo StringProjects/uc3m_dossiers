@@ -1,0 +1,156 @@
+/************************************************************
+ * TAGS
+ ************************************************************/
+
+// Tag wrapper
+.wrapper-tag {
+
+  display: flex;
+  flex-direction: column;
+
+  &.horizontal {
+
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: rem-calc(10);
+    flex-wrap: wrap;
+
+    &.auto {
+      display: inline-flex;
+
+      .tag.close {
+        padding-right: $kilo-size;
+      }
+    }
+
+    .tag {
+      // flex: 1;
+      margin-right: rem-calc(8);
+      margin-bottom: rem-calc(8);
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+// @Tag
+  .tag {
+    background-color: $grey-lighter;
+    border: 1px solid $grey-light;
+    border-radius: rem-calc(4);
+    font-size: $font-size-micro;
+    height: $font-size-h3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    page-break-before: always;
+    padding-right: rem-calc(12);
+    padding-left: rem-calc(12);
+    margin-bottom: rem-calc(8);
+    position: relative;
+
+    &.close {
+      justify-content: flex-start;
+      padding-left: rem-calc(20);
+    }
+
+    &.rounded {
+      border-radius: $font-size-h6;
+    }
+
+    &.extra-big {
+      height: rem-calc(37);
+      padding-right: $font-size-micro;
+      padding-left: $font-size-micro;
+
+      &.with-icon {
+        padding-left: rem-calc(8);
+
+        .wrapper-icon {
+          margin-right: rem-calc(7);
+        }
+      }
+
+      .tag-text {
+        font-family: $font-family-medium;
+        font-size: $font-size-h6;
+      }
+    }
+
+    &.big {
+      height: rem-calc(28);
+      &.rounded {
+        border-radius: rem-calc(14);
+      }
+      @media #{$md-and-up} {
+        height: rem-calc(40);
+        &.rounded {
+          border-radius: rem-calc(20);
+        }
+      }
+    }
+
+    &.small {
+      height: rem-calc(22);
+      &.rounded {
+        border-radius: rem-calc(11);
+      }
+    }
+
+    &.primary {
+      background-color: $primary-color;
+    }
+    &.secondary {
+      background-color: $secondary-color;
+    }
+    &.tertiary {
+      background-color: $tertiary-color;
+    }
+
+    &.primary ,
+    &.secondary ,
+    &.tertiary {
+      border: 0;
+      .tag-text {
+        color: white;
+        font-size: rem-calc(11);
+        font-family: $font-family-bold;
+        margin: 0;
+      }
+    }
+
+    .tag-text {
+      margin: 0;
+    }
+
+    .close {
+      background-color: white;
+      border: 1px solid $grey-light;
+      border-radius: rem-calc(12);
+      cursor: pointer;
+      width: rem-calc(20);
+      height: rem-calc(20);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      right: rem-calc(8);
+
+      @media #{$md-and-up} {
+        width: rem-calc(24);
+        height: rem-calc(24);
+      }
+
+      img {
+        width: rem-calc(10); 
+        height: rem-calc(10);
+      }
+    }
+
+  }
+  // @Tag
+
+}
+// @Tag wrapper

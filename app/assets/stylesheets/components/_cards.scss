@@ -1,0 +1,450 @@
+/************************************************************
+ * CARDS
+ ************************************************************/
+
+// Cards
+.wrapper {
+  &.cards {
+
+    margin-bottom: rem-calc(56);
+
+    .container {
+      border-bottom: 2px solid $grey-lighter;
+      padding-bottom: rem-calc(16);
+    }
+
+    .cards {
+      margin-bottom: rem-calc(-5);
+
+      &.horizontal {
+        .card {
+          height: rem-calc(115);
+          display: flex;
+          flex-direction: row;
+          position: relative;
+          margin-bottom: $font-size-micro;
+
+          @media #{$lg-and-up} {
+            height: rem-calc(146);
+
+            &:before {
+              background-image: asset-url('icons/arrow-left.svg');
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: rem-calc(8) rem-calc(13);
+              transform: rotate(180deg);
+              content: '';
+              display: block;
+              width: rem-calc(8);
+              height: rem-calc(13);
+              position: absolute;
+              top: 50%;
+              right: rem-calc(24);
+              margin-top: rem-calc(-4);
+            }
+
+          }
+
+          .card-header {
+            padding-left: rem-calc(126);
+
+            .card-image-wrapper {
+              width: rem-calc(126);
+              display: flex;
+              align-items: center;
+
+              .card-image-text {
+                color: white;
+                font-size: rem-calc(28);
+                font-family: $font-family-bold;
+                text-align: center;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                z-index: 2;
+                margin-top: rem-calc(-19);
+                margin-left: rem-calc(38);
+
+                span {
+                  display: block;
+                  font-size: rem-calc(10);
+                }
+              }
+            }
+          }
+
+
+          .card-content {
+            flex: 1;
+            padding-right: rem-calc(12);
+            padding-left: rem-calc(12);
+
+            @media #{$lg-and-up} {
+              padding-right: rem-calc(24);
+              padding-left: rem-calc(24);
+            }
+
+
+            .title {
+              width: 100%;
+              font-family: $font-family-medium;
+              font-size: $font-size-h5;
+              margin: 0 0 rem-calc(4);
+
+              @media #{$lg-and-up} {
+                font-size: rem-calc(22);
+                max-height: rem-calc(30);
+                margin: 0 0 $font-size-h6;
+              }
+            }
+
+            .date-time {
+              font-size: $font-size-micro;
+              display: flex;
+              flex-direction: row;
+
+              @media #{$lg-and-up} {
+                font-size: $font-size-h6;
+                margin-bottom: $font-size-h6;
+              }
+
+              .date ,
+              .time {
+                margin: 0;
+              }
+
+              .time {
+                border-left: rem-calc(1) solid $grey-light;
+                display: none;
+                padding-left: rem-calc(20);
+                margin-left: rem-calc(20);
+
+                @media #{$lg-and-up} {
+                  display: block;
+                }
+              }
+            }
+
+            .price {
+              display: none;
+              flex-direction: row;
+              align-items: center;
+              margin: 0;
+
+              @media #{$lg-and-up} {
+                display: flex;
+              }
+
+              p {
+                margin: 0;
+              }
+
+              .wrapper-icons {
+                margin-right: $font-size-h6;
+              }
+            }
+          }
+        }
+      }
+
+      // Card
+      .card {
+        transition: all 300ms ease-out;
+        background-color: white;
+        border: 1px solid $grey-light;
+        border-radius: rem-calc(4);
+        overflow: hidden;
+        position: relative;
+
+        &:hover {
+          box-shadow: 0 rem-calc(1) rem-calc(10)  rgba(72, 72, 72, .14);
+
+          .card-header {
+            .card-image-wrapper {
+              .card-image {
+                transform: scale(1.2);
+              }
+            }
+          }
+        }
+
+        .card-image-wrapper {
+          .wrapper-tag {
+            justify-content: flex-end;
+            align-items: flex-end;
+            position: absolute;
+            bottom: rem-calc(24);
+            right: 0;
+
+            .tag {
+              border-radius: rem-calc(4) 0 0 rem-calc(4);
+
+              .wrapper-icon {
+                justify-content: flex-start;
+                width: $font-size-h4;
+                height: $font-size-h4;
+                overflow: hidden;
+                margin-right: 0;
+
+                img {
+                  height: 100%;
+                }
+              }
+
+              .tag-text {
+                font-family: $font-family-default;
+                font-size: $font-size-micro;
+              }
+            }
+          }
+        }
+
+
+        // Card Local
+        &.local {
+
+
+          .card-content {
+            .card-local {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              position: relative;
+              margin-bottom: rem-calc(6);
+
+              .card-local-place {
+                color: $grey-warm;
+                font-size: $font-size-micro;
+                margin: 0;
+              }
+              .card-local-event {
+                color: $grey-warm;
+                font-size: rem-calc(10);
+                margin: 0;
+              }
+
+              .card-local-badge {
+                position: absolute;
+                top: rem-calc(-40);
+                right: 0;
+                @media #{$md-and-up} {
+                  top: rem-calc(-44);
+                }
+              }
+            }
+
+            .wrapper-tag {
+              .tag {
+                margin-bottom: 0;
+
+              }
+            }
+          }
+        }
+        // @Card Local
+
+        // Card Zone
+        &.zone {
+          .more-places {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            position: absolute;
+            bottom: rem-calc(24);
+            
+            .more-places-link {
+              color: $tertiary-color;
+              font-size: $font-size-h6;
+              font-family: $font-family-bold;
+              padding-top: rem-calc(4);
+              margin: 0;
+            }
+
+            .more-places-icon {
+              transform: rotate(-90deg);
+              background-image: asset-url('icons/arrow-down-light.svg');
+              background-position: center;
+              background-size: rem-calc(12) rem-calc(12);
+              background-repeat: no-repeat;
+              width: rem-calc(12);
+              height: rem-calc(12);
+              margin-left: rem-calc(8);
+            }
+            
+          }
+        }
+        // @Card Zone
+
+        // Card link container
+        .card-link-container {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0; 
+          right: 0;
+          z-index: 3;
+        }
+        // @Card link container
+
+        // Card image wrapper
+        .card-header {
+          position: relative;
+
+          &:before {
+            content: "\00A0";
+            display: block;
+            width: 100%;
+            padding-top: 50%;
+          }
+
+          .card-image-wrapper {
+            // height: rem-calc(180);
+            // transition: all 300ms ease-out;
+            // display: flex;
+            // justify-content: center;
+            overflow: hidden;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:before {
+              content: '';
+              background: linear-gradient(rgba(66, 74, 143, .33), rgba(20, 24, 59, .33));
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              z-index: 1;
+            }
+
+
+            .wrapper-tag {
+              z-index: 3;
+            }
+
+            .card-price {
+              background-color: white;
+              border-radius: 0 rem-calc(4) rem-calc(4) 0;
+              font-size: $font-size-h4;
+              font-family: $font-family-bold;
+              text-align: left; 
+              width: rem-calc(78);
+              height: $font-size-h1;
+              position: absolute;
+              top: rem-calc(32);
+              left: 0;
+              z-index: 1;
+              margin: 0;
+              padding-top: rem-calc(5);
+              padding-left: rem-calc(16);
+
+              span {
+                color: $grey-warm;
+                font-size: rem-calc(10);
+                line-height: $font-size-micro;
+                display: block;
+              }
+            }
+
+            .card-image {
+              transition: all 300ms ease-out;
+              transform: scale(1);
+              max-height: 100%;
+              // max-width: 100%;
+              // transform: translateY(-50%) translateX(-50%);
+              // position: relative;
+              // top: 50%;
+              // left: 50%;
+            }
+
+          }
+
+        }
+        // @Card image wrapper
+
+        // Card content
+        .card-content {
+          min-height: rem-calc(20);
+          padding: rem-calc(20);
+
+          @media #{$md-and-up} {
+            padding: rem-calc(24);
+          }
+
+          .card-date {
+            color: $tertiary-color;
+            font-family: $font-family-bold;
+            font-size: $font-size-micro;
+            margin-top: 0;
+            margin-bottom: rem-calc(6);
+          }
+
+          .card-title {
+            max-height: rem-calc(56);
+            margin-bottom: rem-calc(8);
+          }
+
+          .card-place {
+            font-size: $font-size-h6;
+            line-height: rem-calc(20); 
+            max-height: rem-calc(40);
+            overflow: hidden;
+            margin-top: 0;
+            margin-bottom: rem-calc(16);
+          }
+
+          .wrapper-tag {
+            width: calc(100% - 48px);
+            max-height:  rem-calc(28);
+            overflow: hidden;
+            position: absolute;
+            bottom: rem-calc(24);
+            padding-bottom: 0;
+
+            .tag {
+              margin-bottom: 0;
+
+              &:last-child {
+                @media only screen and (min-width : #{$lg}) and (max-width: rem-calc(1150)) {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+        // @Card content
+
+      }
+      // @Card
+      
+    }
+
+    // See more button
+    .see-more {
+      font-family: $font-family-medium;
+      font-size: $font-size-h5;
+      line-height: rem-calc(22);
+      display: inline-block;
+      margin-top: rem-calc(4);
+
+      @media #{$sm-and-up} {
+        margin-top: 0;
+      }
+
+      span {
+        color: $tertiary-color;
+      }
+    }
+    // @See more button
+  }
+}
+// @Cards

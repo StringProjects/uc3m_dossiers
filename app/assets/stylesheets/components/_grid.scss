@@ -1,0 +1,55 @@
+/************************************************************
+ * GRID
+ ************************************************************/
+.col-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &.twenty-percentage {
+    .col {
+      @media #{$sm-and-up} {
+        width: calc(33.33333% - 15px);
+      }
+      @media #{$lg-and-up} {
+        width: calc(20% - 30px);
+      }
+    }
+  }
+
+  .col {
+    width: 100%;
+    margin-bottom: rem-calc(18);
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    @media #{$sm-and-up} {
+      width: calc(50% - 15px);
+      margin-left: rem-calc(30);
+      margin-bottom: rem-calc(30);
+
+      &:nth-child(odd) {
+        margin-left: 0;
+      }
+    }
+
+    @media #{$lg-and-up} {
+      width: calc(25% - 23px);
+
+      &:nth-child(odd) {
+        margin-left: rem-calc(30);
+      }
+
+      &:nth-child(4n+5){
+        margin-left: 0;
+      }
+
+      &:first-child {
+        margin-left: 0 
+      }
+
+    }
+  }
+}
