@@ -9,6 +9,22 @@
   </head>
 
   <body>
+    <ul id="buttons">
+      <li>
+        <span id="close-button" class="fa-stack fa-2x" onclick="$('body').toggleClass('modal')">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-times fa-stack-1x fa-inverse"></i>
+        </span>
+      </li>
+      
+      <li>
+        <span id="sidebar-button" class="fa-stack fa-2x" onclick="document.getElementsByClassName('sidebar')[0].classList.toggle('collapsed'); document.getElementsByClassName('content')[0].classList.toggle('collapsed')">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
+        </span>
+      </li>
+    </ul>
+
     <div id="main">
       <%= yield %>
     </div>

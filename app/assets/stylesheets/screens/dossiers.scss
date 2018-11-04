@@ -9,7 +9,10 @@ body {
 
     #main-modal {
       display: block;
-      transition: all 2s linear;
+    }
+
+    #buttons {
+      display: block;
     }
   }
 }
@@ -17,6 +20,19 @@ body {
 #main-modal {
   display: none;
 }
+
+#buttons {
+  position: absolute;
+  padding-left: 15px;
+  
+  display: none;
+
+  li {
+    list-style: none;
+  }
+
+}
+
 
 .content {
   width: 100%;
@@ -45,14 +61,10 @@ body {
   width: 100%;
 
   background-color: black;
-  border-left: 3px solid #EFD45B;
+  border-left: 3px solid #484848;
 
   padding: 0px 5px 0px 20px;
   color: white;
-
-  h2 {
-    color: #EFD45B;
-  }
 
   @media #{$sm-and-up} {
     width: calc(20%);
@@ -61,6 +73,6 @@ body {
   transition: all .25s;
 
   &.collapsed {
-    width: 0%;
+    display: none;
   }
 }
