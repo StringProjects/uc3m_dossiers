@@ -39,6 +39,10 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+
+  gem 'capistrano-rails', '~> 1.3'
+  gem 'capistrano-rvm'
+  gem 'capistrano3-unicorn'
 end
 
 group :development do
@@ -58,3 +62,5 @@ gem 'activeadmin'
 gem 'devise'
 
 gem 'arctic_admin', :git => "git@github.com:camumino/arctic_admin.git"
+
+gem 'unicorn'
