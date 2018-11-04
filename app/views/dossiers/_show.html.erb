@@ -1,0 +1,19 @@
+<section>
+  <div class="col-wrapper">
+    <div class="content">
+      <%= image_tag(@dossier.image) %>
+      <button onclick="document.getElementsByClassName('sidebar')[0].classList.toggle('collapsed'); document.getElementsByClassName('content')[0].classList.toggle('collapsed')">
+        toggle Sidebar
+      </button>
+    </div>
+
+    <div class="sidebar">
+      <h2><%= @dossier.name %></h2>
+      <p class="description"><%= @dossier.description %></p>
+
+      <% if !@dossier.donwload_link.blank? %>
+        <button class="btn white">Descargar Dossier</button>
+      <% end %>
+    </div>
+  </div>
+</section>

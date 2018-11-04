@@ -1,5 +1,5 @@
 <div class="col card event">
-  <%= link_to '', '#', class: "card-link-container" %>
+  <%= link_to '', dossier_path(dossier), remote: true, class: "card-link-container" %>
   <div class="card-header">
     <div class="card-image-wrapper">
       <%= image_tag(dossier.image, class: 'card-image') %>
@@ -10,23 +10,3 @@
     <p class="title medium card-title multilined-text"><%= dossier.name %></p>
   </div>
 </div>
-
-<section>
-  <div class="col-wrapper">
-    <div class="content">
-      <%= image_tag(dossier.image) %>
-      <button onclick="document.getElementsByClassName('sidebar')[0].classList.toggle('collapsed'); document.getElementsByClassName('content')[0].classList.toggle('collapsed')">
-        toggle Sidebar
-      </button>
-    </div>
-
-    <div class="sidebar">
-      <h2><%= dossier.name %></h2>
-      <p class="description"><%= dossier.description %></p>
-
-      <% if !dossier.donwload_link.blank? %>
-        <button class="btn white">Descargar Dossier</button>
-      <% end %>
-    </div>
-  </div>
-</section>
