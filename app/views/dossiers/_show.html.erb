@@ -6,10 +6,12 @@
 
     <div class="sidebar">
       <h2><%= @dossier.name %></h2>
-      <p class="description"><%= @dossier.description %></p>
+      <p class="description"><%= @dossier.description.html_safe %></p>
 
       <% if !@dossier.donwload_link.blank? %>
-        <button class="btn white">Descargar Dossier</button>
+        <%= link_to @dossier.donwload_link, class: "btn white", target: '_blank' do %>
+          <i class="fa fa-download"></i>&nbsp;&nbsp;Descargar Dossier
+        <% end %>
       <% end %>
     </div>
   </div>

@@ -4,9 +4,6 @@ es:
       dossier:
         one: 'Dosier'
         other: 'Dosieres'
-      document:
-        one: 'Documento'
-        other: 'Documentos'
       user:
         one: 'Usuario'
         other: 'Usuarios'
@@ -16,14 +13,8 @@ es:
         description: 'Descripción'
         created_at: 'Creado'
         updated_at: 'Actualizado'
+        donwload_link: 'URL de descarga'
         image: 'Portada'
-      document:
-        name: 'Nombre'
-        description: 'Descripción'
-        dossier: 'Dosier'
-        created_at: 'Creado'
-        updated_at: 'Actualizado'
-        image: 'Fichero'
       user:
         email: 'email'
         encrypted_password: 'contraseña cifrada'
@@ -31,7 +22,7 @@ es:
         reset_password_sent_at: 'fecha de restablecimiento contraseña'
         remember_created_at: 'fecha de recuerdo'
         password: 'Contraseña'
-        password_confirmacion: 'Confirmar contraseña'
+        password_confirmation: 'Confirmar contraseña'
         sign_in_count: 'Accesos'
         current_sign_in_at: 'Último acceso'
         created_at: 'Creado'

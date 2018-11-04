@@ -199,8 +199,8 @@ ActiveAdmin.setup do |config|
   #   config.register_stylesheet 'my_print_stylesheet.css', media: :print
   #
   # To load a javascript file:
-  #   config.register_javascript 'my_javascript.js'
-
+    config.register_javascript 'custom_froala.js'
+    
   # == CSV options
   #
   # Set the CSV builder separator
@@ -282,7 +282,7 @@ ActiveAdmin.setup do |config|
   # By default, the footer shows the current Active Admin version. You can
   # override the content of the footer here.
   #
-  # config.footer = 'my custom footer text'
+  config.footer = 'Tecmerin - Dosieres @String-Projects'
 
   # == Sorting
   #

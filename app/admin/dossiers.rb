@@ -32,7 +32,6 @@ ActiveAdmin.register Dossier do
     end
 
     column :name
-    column :description
     column :created_at
     
     actions
@@ -45,6 +44,10 @@ ActiveAdmin.register Dossier do
       input :image, as: :file, required: true
       input :donwload_link
       actions
+    end
+
+    script do
+      raw "$(document).ready(function($) { custom_froala('#dossier_description'); })"
     end
   end
 
