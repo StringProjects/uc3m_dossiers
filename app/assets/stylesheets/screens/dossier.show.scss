@@ -1,0 +1,46 @@
+.content {
+  width: 100%;
+
+  background: linear-gradient(rgba(66, 74, 143, 0.33), rgba(20, 24, 59, 0.33));
+
+  text-align: center;
+
+  img {
+    max-width: 98%;
+  }
+
+  @media #{$sm-and-up} {
+    width: calc(80%);
+  }
+
+  &.collapsed {
+    width: calc(100%);
+  }
+
+  transition: all .25s;
+}
+
+
+.sidebar {
+  width: 100%;
+
+  background-color: black;
+  border-left: 3px solid #EFD45B;
+
+  padding: 0px 5px 0px 20px;
+  color: white;
+
+  h2 {
+    color: #EFD45B;
+  }
+
+  @media #{$sm-and-up} {
+    width: calc(20%);
+  } 
+
+  transition: all .25s;
+
+  &.collapsed {
+    width: 0%;
+  }
+}

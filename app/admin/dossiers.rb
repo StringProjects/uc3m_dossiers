@@ -54,7 +54,7 @@ ActiveAdmin.register Dossier do
       row :description
       row :image do |dossier|
         begin
-          image_tag url_for(dossier.image)
+          image_tag url_for(dossier.image), class: 'dossier_show_image'
         rescue
         end
       end

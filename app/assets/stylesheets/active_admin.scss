@@ -16,9 +16,10 @@
 //
 //   .status_tag { background: #6090DB; }
 
-@import "blueimp-gallery.min";
-
-
 .dossier_index_image {
-  height: 10%;
+  height: 85px;
+}
+
+.dossier_show_image {
+  max-width: 90%;
 }

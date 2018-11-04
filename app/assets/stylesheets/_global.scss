@@ -52,14 +52,6 @@ body {
     padding-top: rem-calc(80);
   }
 
-  &.showing-banner {
-    padding-top: rem-calc(132);
-
-    @media #{$sm-and-up} {
-      padding-top: rem-calc(80);
-    }
-  }
-
   &.modal {
     overflow: hidden;
     position: relative;
