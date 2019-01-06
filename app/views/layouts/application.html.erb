@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tecmerin Dossiers</title>
+    <title>Tecmerin Dosieres</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="<%= @custom_class %>">
     <ul id="buttons">
       <li>
-        <span id="close-button" class="fa-stack fa-2x" onclick="$('body').toggleClass('modal')">
+        <span id="close-button" class="fa-stack fa-2x" onclick="window.location.assign('<%= dossiers_url %>')">
           <i class="fa fa-circle fa-stack-2x"></i>
           <i class="fa fa-times fa-stack-1x fa-inverse"></i>
         </span>
@@ -29,6 +29,5 @@
       <%= yield %>
     </div>
 
-    <%= render partial: "layouts/modal" %>
   </body>
 </html>

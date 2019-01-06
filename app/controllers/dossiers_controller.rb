@@ -5,6 +5,7 @@ class DossiersController < ApplicationController
   end
 
   def show
+    @custom_class = 'detail'
     @dossier = Dossier.find(params[:id])
   end
   

@@ -1,24 +1,11 @@
 body {
-  &.modal {
-
+  &.detail {
     padding-top: 0px;
-
-    #main {
-      display: none;
-    }
-
-    #main-modal {
-      display: block;
-    }
 
     #buttons {
       display: block;
     }
   }
-}
-
-#main-modal {
-  display: none;
 }
 
 #buttons {
@@ -30,9 +17,7 @@ body {
   li {
     list-style: none;
   }
-
 }
-
 
 .content {
   width: 100%;
