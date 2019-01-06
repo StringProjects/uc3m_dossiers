@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_03_195535) do
+ActiveRecord::Schema.define(version: 2019_01_06_121917) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,6 +65,8 @@ ActiveRecord::Schema.define(version: 2018_11_03_195535) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "donwload_link", default: ""
+    t.string "slug"
+    t.index ["slug"], name: "index_dossiers_on_slug", unique: true
   end
 
   create_table "users", force: :cascade do |t|

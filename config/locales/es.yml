@@ -13,6 +13,7 @@ es:
         description: 'Descripción'
         created_at: 'Creado'
         updated_at: 'Actualizado'
+        slug: 'URL'
         donwload_link: 'URL de descarga'
         image: 'Portada'
       user:

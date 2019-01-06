@@ -1,5 +1,8 @@
 class Dossier < ApplicationRecord
-  validates_presence_of :name, :image
+  extend FriendlyId
+  friendly_id :name, use: :slugged
   
+  validates_presence_of :name, :image
+
   has_one_attached :image
 end

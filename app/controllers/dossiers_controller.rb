@@ -6,7 +6,7 @@ class DossiersController < ApplicationController
 
   def show
     @custom_class = 'detail'
-    @dossier = Dossier.find(params[:id])
+    @dossier = Dossier.friendly.find(params[:id])
   end
   
 end

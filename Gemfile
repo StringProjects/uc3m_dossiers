@@ -68,3 +68,5 @@ gem "wysiwyg-rails", '= 2.7'
 gem "font-awesome-sass"
 
 gem 'unicorn'
+
+gem 'friendly_id', '~> 5.2.4'

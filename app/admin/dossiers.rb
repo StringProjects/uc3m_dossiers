@@ -13,7 +13,7 @@ ActiveAdmin.register Dossier do
 # end
   menu priority: 1
 
-  permit_params :name, :description, :image, :donwload_link
+  permit_params :name, :description, :image, :url, :donwload_link
 
   filter :name
   filter :description
@@ -42,6 +42,7 @@ ActiveAdmin.register Dossier do
       input :name, required: true
       input :description, required: true
       input :image, as: :file, required: true
+      input :slug
       input :donwload_link
       actions
     end
@@ -60,6 +61,10 @@ ActiveAdmin.register Dossier do
           image_tag url_for(dossier.image), class: 'dossier_show_image'
         rescue
         end
+      end
+
+      row :url do |dossier|
+        dossier_url(dossier)
       end
       
       row :donwload_link
