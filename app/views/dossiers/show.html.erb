@@ -1,7 +1,10 @@
 <section>
   <div class="col-wrapper">
     <div class="content">
-      <%= image_tag(@dossier.image) %>
+      <% @dossier.images.each do |image| %>
+        <%= image_tag(image.avatar.url) %>
+        </br>
+      <% end %>
     </div>
 
     <div class="sidebar">
