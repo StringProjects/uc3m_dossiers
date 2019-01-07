@@ -2,7 +2,9 @@
   <%= link_to '', dossier_path(dossier), class: "card-link-container" %>
   <div class="card-header">
     <div class="card-image-wrapper">
-      <%= image_tag(dossier.image, class: 'card-image') %>
+      <% if (image = dossier.images.order(highlighted: :desc).first) %>
+        <%= image_tag(image.avatar.url, class: 'card-image') %>
+      <% end %>
     </div>
   </div>
   

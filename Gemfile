@@ -70,3 +70,4 @@ gem "font-awesome-sass"
 gem 'unicorn'
 
 gem 'friendly_id', '~> 5.2.4'
+gem 'paperclip', '~> 6.0.0'

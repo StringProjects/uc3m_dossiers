@@ -7,6 +7,9 @@ es:
       user:
         one: 'Usuario'
         other: 'Usuarios'
+      image:
+        one: 'Imagen'
+        other: 'Imágenes'
     attributes:
       dossier:
         name: 'Nombre'
@@ -15,7 +18,7 @@ es:
         updated_at: 'Actualizado'
         slug: 'URL'
         donwload_link: 'URL de descarga'
-        image: 'Portada'
+        images: 'Imágenes'
       user:
         email: 'email'
         encrypted_password: 'contraseña cifrada'
@@ -28,6 +31,9 @@ es:
         current_sign_in_at: 'Último acceso'
         created_at: 'Creado'
         updated_at: 'Actualizado'
+      image:
+        avatar: 'Fichero'
+        highlighted: 'Portada'
     errors:
       messages:
         record_invalid: "La validación falló: %{errors}"

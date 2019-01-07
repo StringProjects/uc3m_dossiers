@@ -13,7 +13,7 @@ ActiveAdmin.register Dossier do
 # end
   menu priority: 1
 
-  permit_params :name, :description, :image, :url, :donwload_link
+  permit_params :name, :description, :url, :donwload_link, images_attributes: [:highlighted, :avatar, :id, :_destroy]
 
   filter :name
   filter :description
@@ -22,13 +22,6 @@ ActiveAdmin.register Dossier do
   index do
     actions defaults: false do |dossier|
       item dossier.id, admin_dossier_path(dossier)
-    end
-
-    column :image do |dossier|
-      begin
-        image_tag url_for(dossier.image), class: "dossier_index_image"
-      rescue
-      end
     end
 
     column :name
@@ -41,11 +34,17 @@ ActiveAdmin.register Dossier do
     inputs do
       input :name, required: true
       input :description, required: true
-      input :image, as: :file, required: true
       input :slug
       input :donwload_link
+    
+      has_many :images, heading: false, allow_destroy: true do |ff|
+        ff.input :avatar, required: true, as: :file, :hint => ff.template.image_tag(ff.object.avatar.url(:original))
+        ff.input :highlighted
+      end
+      
       actions
     end
+
 
     script do
       raw "$(document).ready(function($) { custom_froala('#dossier_description'); })"
@@ -56,11 +55,12 @@ ActiveAdmin.register Dossier do
     attributes_table do
       row :name
       row :description
-      row :image do |dossier|
-        begin
-          image_tag url_for(dossier.image), class: 'dossier_show_image'
-        rescue
+      row :images do |dossier|
+        images = ''
+        dossier.images.each do |image|
+          images += image_tag image.avatar.url, class: 'dossier_show_image'
         end
+        raw images
       end
 
       row :url do |dossier|
